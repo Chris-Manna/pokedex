@@ -73,3 +73,5 @@ Features coming soon:
 
 NOTES:
 - There are some pokemon from each CSV that have the same ID but different Evolutions
+- Python3
+- Django 4.0.2
