@@ -4,10 +4,11 @@ Use this web application as a site to store and view your Pokemon.
 On the main page you can...
 - View information about all of the pokemon uploaded and viewable on cards.
 
-Notice the navigator bar at the top...
+Notice the navigator bar at the top:
 <img width="526" alt="Screen Shot 2023-03-10 at 3 59 15 AM" src="https://user-images.githubusercontent.com/9891972/224310624-5fffa9c5-abe4-4430-a7ef-525000fe2652.png">
 
-Use the paginator at the bottom to see more pokemon
+Use the paginator at the bottom to see pokemon on a different page
+<img width="574" alt="Screen Shot 2023-03-10 at 4 04 48 AM" src="https://user-images.githubusercontent.com/9891972/224311770-5dcc12fb-e938-4baf-9918-fb37c70b3c01.png">
 
 
 Navigate to your own user profile to...
