@@ -1,7 +1,52 @@
 # Pokedex
 Use this web application as a site to store and view your Pokemon. 
 
-On the main page you can...
+## Current State of the application
+Right now this project uses Python3, Django, CSS, HTML, and a SQLite database. 
+
+## How to run the project
+- Download and install the code onto your computer
+
+Use the following commands:
+- `python3 manage.py makemigrations`
+- `python3 manage.py migrate`
+- `python3 manage.py runserver` this will run the server locally
+- navigate to your browser and use the local port as a way to access the content of the website
+
+NOTES:
+- There are some pokemon from each CSV that have the same ID but different Evolutions and so i chose to use the first version of the pokemon that appeared in the db to follow the thread of evolutions
+- Python3
+- Django 4.0.2
+
+### The current features of the app as a user you can...
+- Register for the application as a new user and log in as an existing user - there are two different versions of the app you'll see both as a logged in user and a logged out user.
+- Upload a CSV file and thereby claim pokemon as part of your pokedex as a trainer. These pokemon then appear on the front page with all other pokemon. They also appear on your profile.
+- Go to the main page to see what other monsters there are being trained by different trainers
+- You can click on the trainer name on the pokemon card
+- While on a trainer profile other than your own you can follow them. 
+- When you navigate to a trainer profile you'll be able to see the trainer's following/follower ratio and the pokemon that they train.
+- Notice each pokemon card has the specifications from the code challenge is represented, including...Weaknesses as represented by the pokemon that have those strength and Strengths  as represented by the pokemon that have the pokemone's strengths as weaknesses
+- Names of the current pokemon's Evolutions in the form a DFS algorithm
+
+### Lessons Learned: 
+- Swap out Django for JavaScript, Vue, or React
+
+### Next Steps for the application:
+The next steps I'm going to take are in an effort to make the application more scalable and usable:
+- Turn the SQLite database into an AWS backend and convert calls to the backend into REST API requests
+- Replace django features with vanilla JS or Vue
+- Deploy the project using a GitHub.io tool so that friends can enjoy it!
+- Include the ability for users to comment
+- If this were a full scale aerospace application:
+
+### I would probably include...
+AWS Cognito verification to verify the user is who they say they are
+A separate full scale controller for users to be able to run aerospace algorithms without taking up resources
+Use docker to package and ship the application so that it would work on your computer right out of the box as your computer may need to have the right version python (python3), Django.
+
+_______
+
+### On the main page you can...
 - View information about all of the pokemon uploaded and viewable on cards.
 
 Notice the navigator bar at the top:
@@ -63,15 +108,10 @@ Currently there are 12 users:
 <img width="1143" alt="Screen Shot 2023-03-10 at 3 44 12 AM" src="https://user-images.githubusercontent.com/9891972/224307751-68c8a54b-43a0-48b5-9b58-c47542f606f4.png">
 
 
-Features coming soon: 
+### Features coming soon: 
 - The ability to search for a pokemon
 - The ability to search for a trainer
 - The ability to comment on trainers profiles
 - The ability to comment on monster cards
 - The ability to view "followers" and people you follow
 - Turn this into a single page application
-
-NOTES:
-- There are some pokemon from each CSV that have the same ID but different Evolutions
-- Python3
-- Django 4.0.2
