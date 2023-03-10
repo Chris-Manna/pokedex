@@ -69,6 +69,7 @@ Features coming soon:
 - The ability to comment on trainers profiles
 - The ability to comment on monster cards
 - The ability to view "followers" and people you follow
+- Turn this into a single page application
 
 NOTES:
 - There are some pokemon from each CSV that have the same ID but different Evolutions
