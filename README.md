@@ -7,18 +7,15 @@ On the main page you can...
 Notice the navigator bar at the top...
 Notice the paginator at the bottom...
 
-Navigate to your user profile to...
-- Add pokemon using a CSV file with all of the new monsters you want to train. 
-- view all of the monsters you train
+Navigate to your own user profile to...
+- Add pokemon to your pokedex using a CSV file with all of the new monsters you want to train. See example: 
+<img width="521" alt="Screen Shot 2023-03-10 at 3 55 56 AM" src="https://user-images.githubusercontent.com/9891972/224310095-f63ca007-342c-485c-8df4-88308b631ebe.png">
+
+- view all of the monsters you train by clicking on your profile name. See Example: 
+<img width="541" alt="Screen Shot 2023-03-10 at 3 57 08 AM" src="https://user-images.githubusercontent.com/9891972/224310268-11e5464c-6bee-43e9-a54f-7da0c35d4cd0.png">
+
 
 Follow other trainers and have trainers follow you. 
-
-Features coming soon: 
-- The ability to search for a pokemon
-- The ability to search for a trainer
-- The ability to comment on trainers profiles
-- The ability to comment on monster cards
-
 
 Currently there are 12 users: 
 - basic
@@ -61,6 +58,13 @@ Currently there are 12 users:
 - weakness_against_many
 <img width="1143" alt="Screen Shot 2023-03-10 at 3 44 12 AM" src="https://user-images.githubusercontent.com/9891972/224307751-68c8a54b-43a0-48b5-9b58-c47542f606f4.png">
 
+
+Features coming soon: 
+- The ability to search for a pokemon
+- The ability to search for a trainer
+- The ability to comment on trainers profiles
+- The ability to comment on monster cards
+- The ability to view "followers" and people you follow
 
 NOTES:
 - There are some pokemon from each CSV that have the same ID but different Evolutions
