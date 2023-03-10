@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db import IntegrityError
-from django.http import Http404, HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import Http404, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 import csv
@@ -17,7 +17,7 @@ def show_posts(title, request, posts, profile=None):
 
     # Get current page of posts
     page_index = request.GET.get("page", 1)
-    paginator = Paginator(posts, 10)
+    paginator = Paginator(posts, 5)
     page = paginator.page(page_index)
 
     # Show posts page
@@ -45,7 +45,7 @@ def show_monsters(title, request, monsters, profile=None):
     print("inside show_monsters")
     # Get current page of posts
     page_index = request.GET.get("page", 1)
-    paginator = Paginator(monsters, 10)
+    paginator = Paginator(monsters, 5)
     page = paginator.page(page_index)
 
     # Show posts page

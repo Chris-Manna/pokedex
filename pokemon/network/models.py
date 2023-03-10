@@ -56,7 +56,7 @@ class Monster(models.Model):
   
   def get_children(self, lineage = ""):
     children = []
-    monster = Monster.objects.get(monster_id=self.monster_id)
+    monster = Monster.objects.filter(monster_id=self.monster_id).first()
     
     def get_children_helper(monster = None, lineage=""):
       evolutions_list = monster.evolutions.split(",")
@@ -69,7 +69,7 @@ class Monster(models.Model):
         return lineage
       
       for child_id in evolutions_list:
-        child = Monster.objects.get(monster_id = child_id)
+        child = Monster.objects.filter(monster_id=child_id).first()
         future_generations = get_children_helper(child, lineage)
         children.append(future_generations)
     get_children_helper(monster)
