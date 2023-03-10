@@ -43,7 +43,8 @@ Currently there are 12 users:
 
 
 - simple_evolution
-<img width="1117" alt="Screen Shot 2023-03-10 at 3 47 30 AM" src="https://user-images.githubusercontent.com/9891972/224308288-abd9f381-f956-42ed-9043-360be28c4801.png">
+<img width="1106" alt="Screen Shot 2023-03-10 at 3 53 45 AM" src="https://user-images.githubusercontent.com/9891972/224309549-eaae691b-ae11-4079-b31a-6e240b73d6e0.png">
+
 
 - single_strength
 <img width="1096" alt="Screen Shot 2023-03-10 at 3 46 49 AM" src="https://user-images.githubusercontent.com/9891972/224308185-1aa38470-dde9-4e6b-8a0a-4da79c7d86be.png">
