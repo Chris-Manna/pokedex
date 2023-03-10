@@ -1,0 +1,96 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <h2>{{ title }}</h2>
+
+    {% if profile %}
+        <ul>
+            <li>Followers: {{ profile.followers.count }}</li>
+            <li>Following: {{ profile.following.count }}</li>
+        </ul>
+        {% if request.user.is_authenticated and profile != request.user %}
+            {% if request.user not in profile.followers.all %}
+                <form action="{% url 'follow' profile.username %}" method="post">
+                    {% csrf_token %}
+                    <input class="btn btn-small btn-primary" type="submit" value="Follow" />
+                </form>
+            {% else %}
+                <form action="{% url 'unfollow' profile.username %}" method="post">
+                    {% csrf_token %}
+                    <input class="btn btn-small btn-primary" type="submit" value="Unfollow" />
+                </form>
+            {% endif %}
+        {% endif %}
+
+        {% if show_new_monster %}
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Add New Monsters by loading a CSV file</h5>
+              <form action="{% url 'monster_csv' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="monster_file">
+                <input type="submit" value="Upload All Monsters">
+              </form>
+            </div>
+        {% endif %}
+    {% endif %}
+
+
+    {% csrf_token %}
+    {% for monster in page.object_list %}
+        <div class="card">
+            <div class="card-body">
+              <table>
+                <tr>
+                  <td colspan="2">
+                    <h5 class="card-title">
+                      <div data-monster="{{ monster.name }}" class="monster-name">{{ monster.name }}</div>
+                      <div data-monster="{{ monster.monster_id }}" class="monster-id">{{ monster.monster_id }}</div>
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div data-types="{{ monster.types }}" class="monster-types card-type electric">Types: {{ monster.get_strong_against }}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div data-weaknesses="{{ monster.weaknesses }}" class="monster-weaknesses card-info">Weakness Against: {{ monster.get_monsters_weak_against }}</div>
+                  </td>
+                </tr>
+                </tr>
+                  <td>
+                    <div data-trainer="{{ monster.trainer }}" class="monster-trainer">
+                      <b>Trainer:</b> <a href="{% url 'user' monster.trainer.username %}">{{ monster.trainer.username }}</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div data-evolutions="{{ monster.evolutions }}" class="monster-evolutions">Evolutions: </div>
+                    <ol>
+                    {% for evolution in monster.get_children %}
+                      <li><div style="outline: 2px solid blue;">{{ evolution }}</div></li>
+                    {% endfor %}
+                    </ol>
+                  </td>
+                </tr>
+              </table>
+            </div>
+        </div>
+    {% endfor %}
+    
+    <hr>
+    <ul class="pagination pagination-sm">
+        {% if page.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}">Older Monsters</a></li>
+        {% endif %}
+        {% if page.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}">Newer Monsters</a></li>
+        {% endif %}
+    </ul>
+    <script src="{% static 'network/scripts.js' %}"></script>
+{% endblock %}
