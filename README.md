@@ -8,6 +8,8 @@ Right now this project uses Python3, Django, CSS, HTML, and a SQLite database.
 - Download and install the code onto your computer
 
 Use the following commands:
+- Python3
+- Django 4.0.2
 - `python3 manage.py makemigrations`
 - `python3 manage.py migrate`
 - `python3 manage.py runserver` this will run the server locally
@@ -15,8 +17,6 @@ Use the following commands:
 
 NOTES:
 - There are some pokemon from each CSV that have the same ID but different Evolutions and so i chose to use the first version of the pokemon that appeared in the db to follow the thread of evolutions
-- Python3
-- Django 4.0.2
 
 ### The current features of the app as a user you can...
 - Register for the application as a new user and log in as an existing user - there are two different versions of the app you'll see both as a logged in user and a logged out user.
