@@ -8,8 +8,8 @@ Right now this project uses Python3, Django, CSS, HTML, and a SQLite database.
 - Download and install the code onto your computer
 
 Use the following commands:
-- Python3
-- Django 4.0.2
+- Make sure to have Python3 installed
+- Make sure to have Django 4.0.2 installed
 - `python3 manage.py makemigrations`
 - `python3 manage.py migrate`
 - `python3 manage.py runserver` this will run the server locally
