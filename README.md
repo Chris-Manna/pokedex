@@ -115,3 +115,4 @@ Currently there are 12 users:
 - The ability to comment on monster cards
 - The ability to view "followers" and people you follow
 - Turn this into a single page application
+- Packaging and deploying using Docker
